@@ -1,22 +1,14 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import CssBaseline from '@mui/material/CssBaseline'
 import { BrowserRouter as Router } from 'react-router-dom'
-import { createTheme, ThemeProvider } from '@mui/material'
+import CssBaseline from '@mui/material/CssBaseline'
+import { ThemeProvider } from '@mui/material'
 import { QueryClient, QueryClientProvider } from 'react-query'
 import { ReactQueryDevtools } from 'react-query/devtools'
 
+import theme from 'theme'
 import './index.css'
 import App from './App'
-
-const theme = createTheme({
-  palette: {
-    primary: {
-      main: '#fff',
-    },
-    mode: 'dark',
-  },
-})
 
 const queryClient = new QueryClient()
 
