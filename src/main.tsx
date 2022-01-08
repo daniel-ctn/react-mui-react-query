@@ -17,12 +17,12 @@ ReactDOM.render(
     <Router>
       <ThemeProvider theme={theme}>
         <QueryClientProvider client={queryClient}>
-            <CssBaseline />
-            <App />
+          <CssBaseline />
+          <App />
           <ReactQueryDevtools initialIsOpen={false} />
         </QueryClientProvider>
       </ThemeProvider>
     </Router>
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById('root'),
 )
