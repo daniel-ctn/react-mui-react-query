@@ -7,8 +7,8 @@ interface ButtonProps {
 
 const CommonButton: FC<ButtonProps> = ({ variant = 'contained', children }) => {
   return (
-    <Button variant={variant}>
-      {children}
+    <Button variant={variant}               >
+                            {children}
     </Button>
   )
 }
