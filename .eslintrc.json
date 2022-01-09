@@ -13,14 +13,57 @@
     }
   },
   "extends": [
-    "react-app",
+    "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
-    "prettier"
+    "airbnb-base",
+    "plugin:prettier/recommended",
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "plugin:import/typescript"
   ],
-  // make sure prettier is last
+  "plugins": [
+    "@typescript-eslint",
+    "prettier",
+    "import"
+  ],
+  "rules": {
+    "prettier/prettier": "error",
+    "import/extensions": "off",
+    "import/no-unresolved": "error",
+    "no-console": "off",
+    "import/order": [
+      "error",
+      {
+        "newlines-between": "never",
+        "groups": [
+          [
+            "builtin",
+            "external"
+          ],
+          [
+            "internal",
+            "parent",
+            "sibling",
+            "index"
+          ]
+        ]
+      }
+    ]
+  },
   "settings": {
     "react": {
       "version": "detect"
+    },
+    "import/parsers": {
+      "@typescript-eslint/parser": [
+        ".ts"
+      ]
+    },
+    "import/resolver": {
+      "typescript": {
+        "alwaysTryTypes": true,
+        "project": "./tsconfig.json"
+      }
     }
   },
   "overrides": [
