@@ -1,4 +1,4 @@
-import { FC, ReactElement } from 'react'
+import { FC } from 'react'
 import { Button } from '@mui/material'
 
 interface ButtonProps {
@@ -7,8 +7,8 @@ interface ButtonProps {
 
 const CommonButton: FC<ButtonProps> = ({ variant = 'contained', children }) => {
   return (
-    <Button variant={variant}               >
-                            {children}
+    <Button variant={variant}>
+      {children}
     </Button>
   )
 }

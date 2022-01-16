@@ -3,14 +3,14 @@ import ReactDOM from 'react-dom'
 import { BrowserRouter as Router } from 'react-router-dom'
 import CssBaseline from '@mui/material/CssBaseline'
 import { ThemeProvider } from '@mui/material'
-import { QueryClient, QueryClientProvider } from 'react-query'
+import { QueryClientProvider } from 'react-query'
 import { ReactQueryDevtools } from 'react-query/devtools'
 
-import theme from 'theme'
+import theme from 'config/theme'
+import queryClient from 'config/queryClient'
+
 import './index.css'
 import App from './App'
-
-const queryClient = new QueryClient()
 
 ReactDOM.render(
   <React.StrictMode>
